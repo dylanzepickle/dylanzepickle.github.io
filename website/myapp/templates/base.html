@@ -19,47 +19,62 @@
   <body>
     <header class="header">
       <nav class="navbar">
-        <!-- Left side -->
-        <div class="navbar-left">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-          <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-          <a class="nav-link" href="{% url 'about' %}">About</a>
-          <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
-          <a class="nav-link" href="#">Commissions</a>
+        <ul class="nav-section nav-left">
+          <li>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Commissions</a>
+          </li>
+        </ul>
+        <div class="logo">
+            <a href="{% url 'home' %}">
+            <img id="dylarts" src="{% static 'navbar/dylarts_title.png' %}" alt="Logo">
+            </a>
         </div>
-
-        <!-- Middle -->
-        <div class="navbar-center">
-          <a class="logo" href="{% url 'home' %}">
-            {% comment %} <img src="{% static 'navbar/dylarts_title.png' %}" alt="Logo"> {% endcomment %}
-          </a>
-        </div>
-
-        <!-- Right side -->
-        <div class="navbar-right">
-          <a class="social-icon" href="#">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a class="social-icon" href="#">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a class="social-icon" href="#">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a class="social-icon" href="#">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-          <a class="nav-link" href="#">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
-          <a class="nav-link" href="#">
-            <i class="fa-brands fa-bluesky"></i>
-          </a>
-        </div>
+        <ul class="nav-section nav-right">
+          <li>
+            <a class="social-icon" href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-icon" href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-icon" href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-icon" href="#">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              <i class="fa-brands fa-square-bluesky"></i>
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
     <div class="container">{% block content %} {% endblock %}</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
   </body>
 </html>

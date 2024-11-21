@@ -9,22 +9,66 @@ body{
     background-color: #2b2d41;
     color: white;
     min-height: 100vh;
+    margin: 0;
 }
 
-/* .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: springgreen;
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
-} */
+    background-color: #2b2d41;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-.navbar{
+.navbar .nav-section{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .nav-section li{
+    margin: 0 15px;
+}
+
+.navbar .nav-section li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-section li a:hover{
+    background-color: #575757;
+    border-radius:5px;
+    transform: scale(1.1);
+}
+
+.navbar .logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#dylarts{
+    width: 50%;
+    height: auto;
+     
+}
+
+/* .navbar{
     display: flex;
     width: 100%;
     height: 20%;
@@ -47,7 +91,7 @@ body{
 .logo{
     width: 200px;
     height: 200px;
-}
+} */
 
 /* .navbar-left{
     display: flex;
