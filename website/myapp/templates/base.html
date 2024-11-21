@@ -9,30 +9,39 @@
         Django App
       {% endblock %}
     </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="{% url 'home' %}">My Django App</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Commissions</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header class="header">
+      <nav class="navbar">
+        <!-- Left side -->
+        <div class="navbar-left">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+          <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+          <a class="nav-link" href="#">Commissions</a>
+        </div>
+
+        <!-- Middle -->
+        <div class="navbar-center">
+          <a class="logo" href="{% url 'home' %}">
+            <img src="{% static 'navbar/dylarts_title.png' %}" alt="Logo">
+          </a>
+        </div>
+        
+        <!-- Right side -->
+        <div class="navbar-right">
+          <a class="social-icon" href="#">
+            <img src="#" alt="Twitter">
+          </a>
+        </div>
+      </nav>
+    </header>
     <div class="container">{% block content %} {% endblock %}</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
